@@ -5,25 +5,25 @@
 {% endblock  %}
 
 {% block 'content' %}
-<h1>Contactos</h1>
-<form class="search" action="{% url 'contact' %}" method="GET">
-    <input type="text" name="search" class="search-bar" placeholder="Buscar contacto...">
-    <input type="submit" value="Buscar" class="btn btn-search">
-</form>
-<span class="aux-btns">
-    <a href="{% url 'contact' %}">Ver todos</a>
-    <a href="{% url 'contact_create' %}">Añadir</a>
-</span>
+    <h1>Contactos</h1>
 
-<ul class = "list">
-    {% for contact in contacts %}
-    <li>{{contact.name}}
-        <span>
-            <a href="{% url 'contact_view' id=contact.id %}" class="btn detail">Ver</a>
-            <a href="{% url 'contact_edit' id=contact.id %}" class="btn edit">Editar</a>
-            <a href="{% url 'contact_delete' id=contact.id %}" class="btn delete">Borrar</a>
-        </span>
-    </li>
-    {% endfor %}
-</ul>
+    {% include 'contact/partials/search.html' %}
+    {% include 'contact/partials/by_initial.html' %}
+
+    <span class="aux-btns">
+        <a href="{% url 'contact' %}">Ver todos</a>
+        <a href="{% url 'contact_create' %}">Añadir</a>
+    </span>
+
+    <ul class = "list">
+        {% for contact in contacts %}
+        <li>{{contact.name}}
+            <span>
+                <a href="{% url 'contact_view' id=contact.id %}" class="btn detail">Ver</a>
+                <a href="{% url 'contact_edit' id=contact.id %}" class="btn edit">Editar</a>
+                <a href="{% url 'contact_delete' id=contact.id %}" class="btn delete">Borrar</a>
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
 {% endblock  %}

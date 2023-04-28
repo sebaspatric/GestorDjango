@@ -5,10 +5,7 @@
 
 {% block 'content' %}
 <h1>Tareas</h1>
-<form class="search" action="{% url 'todo' %}" method="GET">
-    <input type="text" name="search" class="search-bar" placeholder="Buscar tarea...">
-    <input type="submit" value="Buscar" class="btn btn-search">
-</form>
+{% include 'todo/partials/search.html' %}
 <span class="aux-btns">
     <a href="{% url 'todo' %}">Ver todas</a>
     <a href="{% url 'todo_create' %}">Añadir</a>
