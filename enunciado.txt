@@ -1,0 +1,35 @@
+gestor personal
+
+agenda de contactos
+funcion de busqueda
+
+listado registrar distintas tareas
+
+2 aplicaciones distintas
+- crud agenda con buscador
+modelo de 
+
+contactos
+-nombre
+-apellidos
+-tel1
+-tel2
+-email
+-compañia
+-fecha de inclusion
+
+crud de tareas
+-titulo
+-descripcion
+
+
+plantillas
+
+layout general
+- estructura HTML
+- menu navegacion --> include
+
+diferentes aplicaciones
+estructura pura
+
+tablas prediseñadas
